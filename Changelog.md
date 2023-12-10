@@ -1,28 +1,20 @@
 ### @main 
 - Código inalterado
 
-### Nivel-1
+### Nivel-2
 __SnakeGame.java__
 
-- Alterado o valor dos parâmetros da chamada da cabeça da cobra de (5, 5) para (15, 75);
+- Comentado as linhas #27 #28 que declaram as variáveis do tamanho do tabuleiro
 
-``` snakeHead = new Tile(15, 75); ```
-    
-__MovementAndCollision.java__
+    ``` 
+    //int boardWidth;
+    //int boardHeight; 
+    ```
 
-- Alterado o valor inicial para `i` do calculo do for da linha #26 de `-1` para `-4`;
+- Alterado o valor de `velocityX` e `velocityY` de `1` e `0` para `0` e `-3` nas linhas #112 e #115
+    ```
+        velocityX = 0;
+        velocityY = -3;
+    ```
 
-``` for (int i = snakeGame.snakeBody.size() - 4; i >= 0; i--) ```
-
-- Alterado o valor para pegar o segmento anterior na linha #39 de `-1` para `-2`;
-``` SnakeGame.Tile prevSnakePart = snakeGame.snakeBody.get(i - 2); ```
-
-- Alterado o valor que velocityY recebe na linha #96 de `1` para `4`;
-
-```
-if (snakeGame.velocityY != -1) {
-    snakeGame.velocityX = 0;
-    snakeGame.velocityY = 4;
-}
-```
-
+- Alterado nome da função `placeFood` para `placeFóod` na linha #149
