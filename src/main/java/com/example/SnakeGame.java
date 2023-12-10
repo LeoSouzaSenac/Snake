@@ -116,7 +116,6 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
     //================================================================================== 
     
-    
 
     //==================INICIALIZA OBJETOS AUXILIARES===================================
         
