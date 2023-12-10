@@ -24,8 +24,8 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         }
     }
 
-    //int boardWidth; //A largura do tabuleiro em pixels.
-    //int boardHeight; //A altura do tabuleiro em pixels.
+    int boardWidth; //A largura do tabuleiro em pixels.
+    int boardHeight; //A altura do tabuleiro em pixels.
     int tileSize = 25; //O tamanho de um quadrado do tabuleiro em pixels.
 
     Tile snakeHead; //A posição da cabeça da cobra.
@@ -109,10 +109,10 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
         /* Define a direção horizontal inicial da cobra para a direita
         (velocidade de 1 pixel por atualização). */
-        velocityX = 0;
+        velocityX = 1;
         /* Define a direção vertical inicial da cobra para nenhuma
         (velocidade de 0 pixels por atualização). */
-        velocityY = -3;
+        velocityY = 0;
 
     //================================================================================== 
     
@@ -146,7 +146,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
     }
 
     /* Método que posiciona a comida aleatoriamente no tabuleiro. */
-    public void placeFóod() {
+    public void placeFood() {
 
         /* Gera um número aleatório entre 0 e boardWidth / tileSize - 1 para a coordenada X da comida. */
         int posX = random.nextInt(boardWidth / tileSize);
