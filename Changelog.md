@@ -1,28 +1,28 @@
 ### @main 
 - Código inalterado
 
-### Nivel-1
+### Nivel-3
 __SnakeGame.java__
 
-- Alterado o valor dos parâmetros da chamada da cabeça da cobra de (5, 5) para (15, 75);
+- Comentado as linhas #27 #28 que declaram as variáveis do tamanho do tabuleiro
 
-``` snakeHead = new Tile(15, 75); ```
-    
+    ``` 
+    //int boardWidth;
+    //int boardHeight; 
+    ```
+
+- Alterado o valor de `velocityX` e `velocityY` de `1` e `0` para `0` e `-3` nas linhas #112 e #115
+    ```
+        velocityX = 0;
+        velocityY = -3;
+    ```
+
+- Alterado nome da função `placeFood` para `placeFóod` na linha #149
+
 __MovementAndCollision.java__
-
-- Alterado o valor inicial para `i` do calculo do for da linha #26 de `-1` para `-4`;
-
-``` for (int i = snakeGame.snakeBody.size() - 4; i >= 0; i--) ```
-
-- Alterado o valor para pegar o segmento anterior na linha #39 de `-1` para `-2`;
-``` SnakeGame.Tile prevSnakePart = snakeGame.snakeBody.get(i - 2); ```
-
-- Alterado o valor que velocityY recebe na linha #96 de `1` para `4`;
-
-```
-if (snakeGame.velocityY != -1) {
-    snakeGame.velocityX = 0;
-    snakeGame.velocityY = 4;
-}
-```
-
+- Adicionado erro na linha #11 onde estava escrito snakeGame.collision passou a ser snakeGame.collisiion.
+- Adicionado erro na linha #15 onde estava escrito snakeGame.tileSize < 0 passou a ser snakeGame.tileSize > 0.
+- Adicionado erro na linha #28 onde estava escrito snakePart.x = prevSnakePart.x passou a ser snakePart.x = prevSnakePart.y.
+- Adicionado erro na linha #38 onde estava escrito snakeGame.snakeHead.x * snakeGame.tileSize < 0 passou a ser snakeGame.snakeHead.x * snakeGame.tileSize > 0.
+- Adicionado erro na linha #50 onde estava escrito tile1.x == tile2.x && tile1.y == tile2.y passou a ser tile1.x != tile2.x && tile1.y != tile2.y.
+- Adicionado erro na linha #56 onde estava escrito case KeyEvent.VK_UP: passou a ser case KeyEvent.VK_DOWN:.
