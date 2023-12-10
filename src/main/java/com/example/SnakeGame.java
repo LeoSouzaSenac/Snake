@@ -84,7 +84,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
         /* Cria um novo objeto Tile representando a cabeça da cobra e a posiciona no
         centro do tabuleiro (coordenadas 5, 5). */
-        snakeHead = new Tile(5, 5);
+        snakeHead = new Tile(15, 75);
 
         /* Cria uma nova ArrayList para armazenar as posições dos
         segmentos do corpo da cobra. */

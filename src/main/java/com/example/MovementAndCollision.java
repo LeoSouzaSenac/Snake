@@ -23,7 +23,7 @@ public class MovementAndCollision {
         }
     
         // Move o corpo da cobra
-        for (int i = snakeGame.snakeBody.size() - 1; i >= 0; i--) {
+        for (int i = snakeGame.snakeBody.size() - 4; i >= 0; i--) {
             // Recupera o segmento atual do corpo
             SnakeGame.Tile snakePart = snakeGame.snakeBody.get(i);
     
@@ -36,7 +36,7 @@ public class MovementAndCollision {
             // Se não for o primeiro segmento
             else {
                 // Recupera o segmento anterior do corpo
-                SnakeGame.Tile prevSnakePart = snakeGame.snakeBody.get(i - 1);
+                SnakeGame.Tile prevSnakePart = snakeGame.snakeBody.get(i - 2);
     
                 // Atualiza a posição X e Y com a posição do segmento anterior
                 snakePart.x = prevSnakePart.x;
@@ -93,7 +93,7 @@ public class MovementAndCollision {
             // a velocidade horizontal é definida como 0 e a velocidade vertical é definida como 1 (para baixo).
             if (snakeGame.velocityY != -1) {
                 snakeGame.velocityX = 0;
-                snakeGame.velocityY = 1;
+                snakeGame.velocityY = 4;
             }
             break;
         case KeyEvent.VK_LEFT:
